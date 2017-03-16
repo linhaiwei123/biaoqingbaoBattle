@@ -16,7 +16,7 @@ cc.Class({
             default: ControlType.jk,
             type: ControlType
         },
-        fsmName: "",
+        //fsmName: "",
         _moveControl: null,
     },
 
@@ -30,7 +30,8 @@ cc.Class({
         this._originSpriteFrame = this.node.getComponent(cc.Sprite).spriteFrame;
         
         //action fsm load 
-        this._fsm = require(this.fsmName);
+        //this._fsm = require(this.fsmName);
+        this._fsm = require("fsm").create();
         this._fsm.startup();
 
         //test cc.action here
