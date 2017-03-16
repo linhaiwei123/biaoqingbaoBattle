@@ -26,6 +26,7 @@ cc.Class({
 
      onCollisionEnter: function(other,self){
         if(other.node.name == 'player'){
+            //游戏结束
             if(this._gameOver){return}
             this._gameOver = true;
             this.resultPanel.getChildByName("label").getComponent(cc.Label).string = "game over";
